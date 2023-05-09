@@ -59,6 +59,7 @@ public class login_root extends javax.swing.JFrame {
         loginBtn = new javax.swing.JPanel();
         loginBtnTxt = new javax.swing.JLabel();
         mensaje = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -76,7 +77,8 @@ public class login_root extends javax.swing.JFrame {
         logoname.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         logoname.setForeground(new java.awt.Color(255, 255, 255));
         logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        root.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));
+        logoname.setText("usuario root");
+        root.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 290, 20));
 
         citybg.setBackground(new java.awt.Color(0, 134, 190));
         citybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/city.png"))); // NOI18N
@@ -177,8 +179,8 @@ public class login_root extends javax.swing.JFrame {
 
         favicon.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         favicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/favicon.png"))); // NOI18N
-        favicon.setText("LOGO");
-        root.add(favicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        favicon.setText("PARKING ");
+        root.add(favicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 340, 70));
 
         title.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         title.setText("INICIAR SESIÓN");
@@ -251,6 +253,11 @@ public class login_root extends javax.swing.JFrame {
 
         root.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 130, 40));
         root.add(mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 130, 40));
+
+        jLabel2.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/park1.png"))); // NOI18N
+        root.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 250, 170));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -417,6 +424,7 @@ public class login_root extends javax.swing.JFrame {
     private javax.swing.JLabel exitTxt;
     private javax.swing.JLabel favicon;
     private javax.swing.JPanel header;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel log_out_root;
