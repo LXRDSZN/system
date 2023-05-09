@@ -4,6 +4,7 @@
  */
 package root;
 
+<<<<<<< HEAD
 /**
  *
  * @author lxrdszn
@@ -16,6 +17,45 @@ public class csl_lugar extends javax.swing.JFrame {
     public csl_lugar() {
         initComponents();
     }
+=======
+import javax.swing.table.DefaultTableModel;
+import clases.Auto;
+import java.awt.Color;
+/**
+ *
+ * @author vanes
+ */
+public class csl_lugar extends javax.swing.JFrame {
+
+     private DefaultTableModel modelo;
+    int contador=0;
+    
+    public csl_lugar() {
+        initComponents();
+    }
+    
+    public void CargarInterfaz(){
+        String datos[][]={};
+        String columna[]={"Placa","Hora","Fecha","Lugar"};
+        modelo=new DefaultTableModel(datos,columna);
+        tb_lugar.setModel(modelo);
+    }
+    
+    public void CargarDatos(){
+        Auto a;
+        for(int i=0; i<frm_horaFrac.contenedorHora.size(); i++){
+            
+            a=(Auto)frm_horaFrac.contenedorHora.get(i);
+            
+            modelo.insertRow(contador,new Object[]{});
+            modelo.setValueAt(a.getPlaca(),contador, 0);
+            modelo.setValueAt(a.getHora(),contador, 1);
+            modelo.setValueAt(a.getLugar(),contador, 2);
+          
+        
+        }
+    }
+>>>>>>> refs/remotes/origin/main
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,6 +67,7 @@ public class csl_lugar extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+<<<<<<< HEAD
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         panel16 = new javax.swing.JPanel();
@@ -497,11 +538,37 @@ public class csl_lugar extends javax.swing.JFrame {
         jLabel18.setText("Hora/fraccion");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, -1, -1));
 
+=======
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tb_lugar = new javax.swing.JTable();
+        txt_lugar = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        pane_1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        pane_2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        pane_3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        pane_4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        pane_5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        pane_6 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+>>>>>>> refs/remotes/origin/main
         tb_lugar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
+<<<<<<< HEAD
                 "Lugar", "Disponibilidad"
             }
         ));
@@ -509,24 +576,262 @@ public class csl_lugar extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 250, -1));
         jPanel1.add(txt_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 40, 80, -1));
+=======
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tb_lugar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tb_lugarMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tb_lugar);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 172, -1, 173));
+        jPanel1.add(txt_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 60, 30));
+
+        jButton1.setBackground(new java.awt.Color(204, 204, 255));
+        jButton1.setText("Ver");
+        jButton1.setToolTipText("");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 90, 60, 30));
+
+        jPanel2.setBackground(new java.awt.Color(126, 190, 247));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pane_1.setBackground(new java.awt.Color(190, 247, 126));
+
+        jLabel1.setFont(new java.awt.Font("Segoe Script", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("1");
+
+        javax.swing.GroupLayout pane_1Layout = new javax.swing.GroupLayout(pane_1);
+        pane_1.setLayout(pane_1Layout);
+        pane_1Layout.setHorizontalGroup(
+            pane_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        pane_1Layout.setVerticalGroup(
+            pane_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pane_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 60, 60));
+
+        pane_2.setBackground(new java.awt.Color(190, 247, 126));
+
+        jLabel2.setFont(new java.awt.Font("Segoe Script", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("2");
+
+        javax.swing.GroupLayout pane_2Layout = new javax.swing.GroupLayout(pane_2);
+        pane_2.setLayout(pane_2Layout);
+        pane_2Layout.setHorizontalGroup(
+            pane_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        pane_2Layout.setVerticalGroup(
+            pane_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pane_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, 60));
+
+        pane_3.setBackground(new java.awt.Color(190, 247, 126));
+
+        jLabel3.setFont(new java.awt.Font("Segoe Script", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("3");
+
+        javax.swing.GroupLayout pane_3Layout = new javax.swing.GroupLayout(pane_3);
+        pane_3.setLayout(pane_3Layout);
+        pane_3Layout.setHorizontalGroup(
+            pane_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel3)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        pane_3Layout.setVerticalGroup(
+            pane_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pane_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, 60));
+
+        pane_4.setBackground(new java.awt.Color(190, 247, 126));
+
+        jLabel4.setFont(new java.awt.Font("Segoe Script", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("4");
+
+        javax.swing.GroupLayout pane_4Layout = new javax.swing.GroupLayout(pane_4);
+        pane_4.setLayout(pane_4Layout);
+        pane_4Layout.setHorizontalGroup(
+            pane_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel4)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        pane_4Layout.setVerticalGroup(
+            pane_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pane_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, -1, 60));
+
+        pane_5.setBackground(new java.awt.Color(190, 247, 126));
+
+        jLabel5.setFont(new java.awt.Font("Segoe Script", 1, 18)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("5");
+
+        javax.swing.GroupLayout pane_5Layout = new javax.swing.GroupLayout(pane_5);
+        pane_5.setLayout(pane_5Layout);
+        pane_5Layout.setHorizontalGroup(
+            pane_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_5Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel5)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        pane_5Layout.setVerticalGroup(
+            pane_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pane_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, 60));
+
+        pane_6.setBackground(new java.awt.Color(190, 247, 126));
+
+        jLabel6.setFont(new java.awt.Font("Segoe Script", 1, 18)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("6");
+
+        javax.swing.GroupLayout pane_6Layout = new javax.swing.GroupLayout(pane_6);
+        pane_6.setLayout(pane_6Layout);
+        pane_6Layout.setHorizontalGroup(
+            pane_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_6Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel6)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        pane_6Layout.setVerticalGroup(
+            pane_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pane_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, -1, 60));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 300, 350));
+
+        jButton2.setText("Menu");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 70, -1));
+>>>>>>> refs/remotes/origin/main
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+=======
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> refs/remotes/origin/main
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void panel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_panel1MouseClicked
+=======
+    private void tb_lugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_lugarMouseClicked
+        // TODO add your handling code here:
+        int seleccionar = tb_lugar.rowAtPoint(evt.getPoint());
+        txt_lugar.setText(String.valueOf(tb_lugar.getValueAt(seleccionar, 1)));
+    }//GEN-LAST:event_tb_lugarMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String panel=this.txt_lugar.getText();
+        int lugar=Integer.parseInt(panel);
+       if(lugar==1){
+            this.pane_1.setBackground(Color.red);
+       }
+       if(lugar==2){
+            this.pane_2.setBackground(Color.red);
+       } 
+       if(lugar==3){
+            this.pane_3.setBackground(Color.red);
+       } 
+       if(lugar==4){
+            this.pane_4.setBackground(Color.red);
+       } 
+       if(lugar==5){
+            this.pane_5.setBackground(Color.red);
+       } 
+       if(lugar==6){
+            this.pane_6.setBackground(Color.red);
+       } 
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new panel_root().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+>>>>>>> refs/remotes/origin/main
 
     /**
      * @param args the command line arguments
@@ -565,6 +870,7 @@ public class csl_lugar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -577,10 +883,16 @@ public class csl_lugar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
+=======
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+>>>>>>> refs/remotes/origin/main
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -603,6 +915,17 @@ public class csl_lugar extends javax.swing.JFrame {
     private javax.swing.JPanel panel7;
     private javax.swing.JPanel panel8;
     private javax.swing.JPanel panel9;
+=======
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel pane_1;
+    private javax.swing.JPanel pane_2;
+    private javax.swing.JPanel pane_3;
+    private javax.swing.JPanel pane_4;
+    private javax.swing.JPanel pane_5;
+    private javax.swing.JPanel pane_6;
+>>>>>>> refs/remotes/origin/main
     private javax.swing.JTable tb_lugar;
     private javax.swing.JTextField txt_lugar;
     // End of variables declaration//GEN-END:variables
