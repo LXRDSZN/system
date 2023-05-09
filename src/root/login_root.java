@@ -76,7 +76,6 @@ public class login_root extends javax.swing.JFrame {
         logoname.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         logoname.setForeground(new java.awt.Color(255, 255, 255));
         logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoname.setText("NOMBRE EMPRESA");
         root.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));
 
         citybg.setBackground(new java.awt.Color(0, 134, 190));
@@ -251,8 +250,6 @@ public class login_root extends javax.swing.JFrame {
         );
 
         root.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 130, 40));
-
-        mensaje.setText("jLabel1");
         root.add(mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 130, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
